@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Mi Página de Ejemplo</title>
+    <link rel="stylesheet" href="tabla.css">
 </head>
 <body>
     <header>
@@ -140,6 +141,7 @@
     <footer>
         <h3>Referencias</h3>
         <ul>
+            <li>Creado en VisualStudio Code</li>
             <li>Beal, V. (n.d.). <i>Internet vs. World Wide Web</i>. Webopedia. Recuperado de <a href="https://www.webopedia.com/insights/internet-vs-world-wide-web/">https://www.webopedia.com/insights/internet-vs-world-wide-web/</a></li>
             <li>MDN Web Docs. (2023). <i>What is a URL?</i>. Mozilla Developer Network. Recuperado de <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL">https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL</a></li>
             <li>Fielding, R., & Reschke, J. (2014). <i>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</i>. RFC 7231. Recuperado de <a href="https://tools.ietf.org/html/rfc7231">https://tools.ietf.org/html/rfc7231</a></li>
@@ -151,5 +153,43 @@
             <li>W3Schools. (2023). <i>HTML5 Form Input Types</i>. Recuperado de <a href="https://www.w3schools.com/html/html5_form_input_types.asp">https://www.w3schools.com/html/html5_form_input_types.asp</a></li>
         </ul>
     </footer>
+
+    <section>
+        <h1>Tabla</h1>
+        <table>
+            <style>
+                th { color: orange;}
+                .clase{border-style: dashed; 
+                border-width: 2px;}
+                #etiqueta{
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: blue;
+                }
+            </style>
+            <tbody >
+                <tr class="clase">
+                    <td> Encabezado</td>
+                    <td id="etiqueta">Encabezado</td>
+                </tr>
+                <tr>
+                    <td class="clase">Contenido</td>
+                    <td>Contenido</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th style="color:  #944 ">cosa</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+
+        </table>
+    </section>
+
+
+
+
+
 </body>
 </html>
