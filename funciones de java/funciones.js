@@ -38,15 +38,25 @@ function cuadrados(n) {
 }
 
 function suma() {
-    let random1 = Math.floor(Math.random()*100 );
-    let random2 = Math.floor(Math.random()*100 );
-    let supuesto =prompt("Dame el resultado de "+ random1+ "+"+ random2 );
+    let random1 = Math.floor(Math.random() * 100);
+    let random2 = Math.floor(Math.random() * 100);
+    let supuesto = prompt("Dame el resultado de " + random1 + " + " + random2);
     let suma = random1 + random2;
     if (supuesto == suma) {
-        alert("��Correcto!");
+        alert("¡Correcto!");
     } else {
-        alert("��Incorrecto!");
+        alert("¡Incorrecto!");
     }
+
+    // Crear un nuevo párrafo en lugar de un elemento body
+    let resultado = document.createElement("p");
+    resultado.textContent = "Resultado: " + suma + ", ";
+    if (supuesto == suma) {
+        resultado.textContent += "estás en lo correcto";
+    } else {
+        resultado.textContent += "estás mal";
+    }
+    document.getElementById("Lab4_JS").appendChild(resultado); // Insertar el mensaje en la sección
 }
 
 

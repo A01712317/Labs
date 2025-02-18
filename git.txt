@@ -1,0 +1,5 @@
+git add -a
+
+git commit -m "Mensaje descriptivo"
+
+git push
