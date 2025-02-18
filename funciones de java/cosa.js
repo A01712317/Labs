@@ -17,15 +17,11 @@ console.assert(1=== true);
 var cosa="Variable antigua"; //no es segura, se puede modificar desde el navegador
 let cosa1="Variable actual"; //No es modificable 
 alert ("ALERTA ALERTA")
-const siono=prompt("Cómo estoy?")
-const nose=confirm("Si o no")
 
 
-function func (){
-    console.log("Esto es una función")
-    return
-}
-func()
+
+// script.js
+
 
 //funcion moderna o anónima
 

@@ -1,158 +1,158 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Mi Página de Ejemplo</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="tabla.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-</head>
-<body>
-    <nav>
-        <a href="#" data-section="Lab0" id="htmlLink">Html</a>
-        <a href="#" data-section="Lab3_Css">Css</a>
-        <a href="#" data-section="Lab4_JS">Java Script</a>
-        <a href="#" data-section="Lab5_FW">Frameworks</a>
-    </nav>
-
-
-    <section id="Lab0" class="hidden">
-        
-    <header>
-        <h2>Yo</h2>
-        <p>Soy Alejandro. 
-        <br>
-        <strong>Matricula:</strong> A01712317
-        <br>
-        <strong>Correo:</strong> A017123@tec.mx
-        <br>
-        Me gusta jugar videojuegos, mi favorito hasta ahora es God of War.</p>
-        <img src="https://www.profesionalreview.com/wp-content/uploads/2018/05/God-of-War_20180515232608.jpg" alt="God of War" width="500" height="300">
-    </header>
+    <head>
+        <title>Mis laboratorios</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    </head>
     <body>
-        
-        <table>
+        <nav>
+            <a href="#" data-section="Lab0" id="htmlLink">Html</a>
+            <a href="#" data-section="Lab3_Css">Css</a>
+            <a href="#" data-section="Lab4_JS">Java Script</a>
+            <button href="#" data-section="Lab5_FW">Frameworks</button>
+        </nav>
+
+
+        <section id="Lab0" class="hidden">
             
-            <tbody>
-                <tr>
-                    <th><h2>Preguntas</h2></th>
-                    <th><h2>Respuestas</h2></th>
-                </tr>
-                <tr>
-                    <td><h3>Diferencia entre Internet y la World Wide Web</h3></td>
-                    <td><p>WWW es un servicio al que podemos acceder mediante internet, ya que internet es una herramienta que ayuda a navegar sitios www.</p></td>
-                </tr>
-                <tr>
-                    <td><h3>Partes de un URL</h3></td>
-                    <td><ul>
-                        <li><strong>https</strong> (protocolo)</li>
-                        <li><strong>www</strong> (subdominio)</li>
-                        <li><strong>nombre.com</strong> (dominio)</li>
-                    </ul></td>
-                </tr>
-                <tr>
-                    <td><h3>Métodos HTTP</h3></td>
-                    <td><ul>
-                        <li><strong>GET</strong>: Se solicita un dato.</li>
-                        <li><strong>HEAD</strong>: Brinda información de un dato, pero sin obtenerlo.</li>
-                        <li><strong>POST</strong>: Envía los datos de un recurso para interactuar con ellos.</li>
-                        <li><strong>PUT</strong>: Reemplaza o actualiza todo el contenido de un recurso ya existente.</li>
-                        <li><strong>PATCH</strong>: Reemplaza o actualiza datos específicos, no todos.</li>
-                        <li><strong>DELETE</strong>: Elimina un recurso.</li>
-                    </ul></td>
-                </tr>
-                <tr>
-                    <td><h3>Método HTTP para formularios HTML</h3></td>
-                    <td><p>Se debe utilizar <strong>POST</strong>, ya que brinda cierta seguridad al limitar la visibilidad de los datos personales.</p></td>
-                </tr>
-                <tr>
-                    <td><h3>Método HTTP al acceder a una página</h3></td>
-                    <td><p>Se utiliza <strong>GET</strong>, ya que accede a los datos solicitados sin modificarlos.</p></td>
-                </tr>
-                <tr>
-                    <td><h3>Código de respuesta HTTP 200</h3></td>
-                    <td><p>Significa que la solicitud ha sido procesada exitosamente. No ocurrió ningún error.</p></td>
-                </tr>
-                <tr>
-                    <td><h3>Errores 404 y 500</h3></td>
-                    <td><p><strong>Error 404</strong>: Es responsabilidad del desarrollador corregirlo, ya que algunas rutas pueden estar mal definidas.</p>
-                    <p><strong>Error 500</strong>: También es responsabilidad del desarrollador, ya que debe ser un problema en el servidor.</p></td>
-                </tr>
-                <tr>
-                    <td><h3>Atributos HTML5 depreciados</h3></td>
-                    <td><p>HTML5 recomienda usar atributos de CSS para realizar acciones como cambiar el color de texto, centrar contenido, definir color en tablas, alinear contenido.</p></td>
-                </tr>
-                <tr>
-                    <td><h3>Diferencias entre HTML4 y HTML5</h3></td>
-                    <td> <ul>
-                        <li>HTML5 incluye elementos que mejoran la experiencia y reemplazan otros métodos que usaba HTML4, como el uso de <code>div</code>. Ahora existen elementos como <code>header</code>, <code>footer</code>, <code>article</code>, <code>section</code>, <code>nav</code>, <code>main</code>, etc.</li>
-                        <li>Puede incluir archivos de audio y video sin necesidad de plugins externos.</li>
-                        <li>Ofrece más tipos de entrada como <code>email</code>, <code>fecha</code>, <code>color</code>, etc.</li>
-                        <li>Integra APIs para funciones que permiten acceder a geolocalización, canvas, etc.</li>
-                    </ul></td>
-                </tr>
-                <tr>
-                    <td><h3>Componentes de estructura y estilo de una tabla</h3></td>
-                    <td><ul>
-                        <li><code>Table</code></li>
-                        <li><code>Table Row</code></li>
-                        <li><code>Table Header</code></li>
-                        <li><code>Table Data</code></li>
-                        <li><code>Thead</code>: Grupo de filas de encabezados.</li>
-                        <li><code>Tbody</code>: Agrupa datos, como celdas de una columna.</li>
-                        <li><code>Table Foot</code>: Agrupa los pies de una tabla.</li>
-                        <li>Estilos: <code>Borders</code>, <code>padding</code>, <code>margin</code>, <code>background-color</code>, <code>text-align</code>.</li>
-                    </ul></td>
-                </tr>
-                <tr>
-                    <td><h3>Controles de una forma HTML5</h3></td>
-                    <td><ul>
-                        <li><code>Text</code></li>
-                        <li><code>Password</code></li>
-                        <li><code>Email</code></li>
-                        <li><code>Number</code></li>
-                        <li><code>Tel</code></li>
-                        <li><code>URL</code></li>
-                        <li><code>Date</code></li>
-                        <li><code>Color</code></li>
-                        <li><code>Textarea</code></li>
-                        <li><code>Select</code></li>
-                        <li><code>Option</code></li>
-                        <li><code>Radio</code> (una opción de varias).</li>
-                        <li><code>Checkbox</code> (una o varias opciones).</li>
-                        <li><code>Button</code>.</li>
-                    </ul></td>
-                </tr>
-                <tr>
-                    <td><h3>Ciclo de vida de los sistemas de información</h3></td>
-                    <td><ol>
-                        <li>Planeación</li>
-                        <li>Análisis de requisitos</li>
-                        <li>Diseño</li>
-                        <li>Desarrollo</li>
-                        <li>Pruebas</li>
-                        <li>Implementación</li>
-                        <li>Mantenimiento</li>
-                    </ol></td>
-                </tr>
-                <tr>
-                    <td><h3>Ciclo de desarrollo de sistemas de información</h3></td>
-                    <td><ol>
-                        <li>Análisis de Requisitos</li>
-                        <li>Diseño del Sistema</li>
-                        <li>Desarrollo</li>
-                        <li>Pruebas</li>
-                        <li>Implementación</li>
-                    </ol></td>
-                </tr>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td class="col1">
-                        <h3>Referencias</h3>
-                        <ul>
+        <header>
+            <h2>Yo</h2>
+            <p>Soy Alejandro. 
+            <br>
+            <strong>Matricula:</strong> A01712317
+            <br>
+            <strong>Correo:</strong> A017123@tec.mx
+            <br>
+            Me gusta jugar videojuegos, mi favorito hasta ahora es God of War.</p>
+            <img src="https://www.profesionalreview.com/wp-content/uploads/2018/05/God-of-War_20180515232608.jpg" alt="God of War" width="500" height="300">
+        </header>
+        <body>
+            
+            <table>
+                
+                <tbody>
+                    <tr>
+                        <th><h2>Preguntas</h2></th>
+                        <th><h2>Respuestas</h2></th>
+                    </tr>
+                    <tr>
+                        <td><h3>Diferencia entre Internet y la World Wide Web</h3></td>
+                        <td><p>WWW es un servicio al que podemos acceder mediante internet, ya que internet es una herramienta que ayuda a navegar sitios www.</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Partes de un URL</h3></td>
+                        <td><ul>
+                            <li><strong>https</strong> (protocolo)</li>
+                            <li><strong>www</strong> (subdominio)</li>
+                            <li><strong>nombre.com</strong> (dominio)</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Métodos HTTP</h3></td>
+                        <td><ul>
+                            <li><strong>GET</strong>: Se solicita un dato.</li>
+                            <li><strong>HEAD</strong>: Brinda información de un dato, pero sin obtenerlo.</li>
+                            <li><strong>POST</strong>: Envía los datos de un recurso para interactuar con ellos.</li>
+                            <li><strong>PUT</strong>: Reemplaza o actualiza todo el contenido de un recurso ya existente.</li>
+                            <li><strong>PATCH</strong>: Reemplaza o actualiza datos específicos, no todos.</li>
+                            <li><strong>DELETE</strong>: Elimina un recurso.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Método HTTP para formularios HTML</h3></td>
+                        <td><p>Se debe utilizar <strong>POST</strong>, ya que brinda cierta seguridad al limitar la visibilidad de los datos personales.</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Método HTTP al acceder a una página</h3></td>
+                        <td><p>Se utiliza <strong>GET</strong>, ya que accede a los datos solicitados sin modificarlos.</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Código de respuesta HTTP 200</h3></td>
+                        <td><p>Significa que la solicitud ha sido procesada exitosamente. No ocurrió ningún error.</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Errores 404 y 500</h3></td>
+                        <td><p><strong>Error 404</strong>: Es responsabilidad del desarrollador corregirlo, ya que algunas rutas pueden estar mal definidas.</p>
+                        <p><strong>Error 500</strong>: También es responsabilidad del desarrollador, ya que debe ser un problema en el servidor.</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Atributos HTML5 depreciados</h3></td>
+                        <td><p>HTML5 recomienda usar atributos de CSS para realizar acciones como cambiar el color de texto, centrar contenido, definir color en tablas, alinear contenido.</p></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Diferencias entre HTML4 y HTML5</h3></td>
+                        <td> <ul>
+                            <li>HTML5 incluye elementos que mejoran la experiencia y reemplazan otros métodos que usaba HTML4, como el uso de <code>div</code>. Ahora existen elementos como <code>header</code>, <code>footer</code>, <code>article</code>, <code>section</code>, <code>nav</code>, <code>main</code>, etc.</li>
+                            <li>Puede incluir archivos de audio y video sin necesidad de plugins externos.</li>
+                            <li>Ofrece más tipos de entrada como <code>email</code>, <code>fecha</code>, <code>color</code>, etc.</li>
+                            <li>Integra APIs para funciones que permiten acceder a geolocalización, canvas, etc.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Componentes de estructura y estilo de una tabla</h3></td>
+                        <td><ul>
+                            <li><code>Table</code></li>
+                            <li><code>Table Row</code></li>
+                            <li><code>Table Header</code></li>
+                            <li><code>Table Data</code></li>
+                            <li><code>Thead</code>: Grupo de filas de encabezados.</li>
+                            <li><code>Tbody</code>: Agrupa datos, como celdas de una columna.</li>
+                            <li><code>Table Foot</code>: Agrupa los pies de una tabla.</li>
+                            <li>Estilos: <code>Borders</code>, <code>padding</code>, <code>margin</code>, <code>background-color</code>, <code>text-align</code>.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Controles de una forma HTML5</h3></td>
+                        <td><ul>
+                            <li><code>Text</code></li>
+                            <li><code>Password</code></li>
+                            <li><code>Email</code></li>
+                            <li><code>Number</code></li>
+                            <li><code>Tel</code></li>
+                            <li><code>URL</code></li>
+                            <li><code>Date</code></li>
+                            <li><code>Color</code></li>
+                            <li><code>Textarea</code></li>
+                            <li><code>Select</code></li>
+                            <li><code>Option</code></li>
+                            <li><code>Radio</code> (una opción de varias).</li>
+                            <li><code>Checkbox</code> (una o varias opciones).</li>
+                            <li><code>Button</code>.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Ciclo de vida de los sistemas de información</h3></td>
+                        <td><ol>
+                            <li>Planeación</li>
+                            <li>Análisis de requisitos</li>
+                            <li>Diseño</li>
+                            <li>Desarrollo</li>
+                            <li>Pruebas</li>
+                            <li>Implementación</li>
+                            <li>Mantenimiento</li>
+                        </ol></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Ciclo de desarrollo de sistemas de información</h3></td>
+                        <td><ol>
+                            <li>Análisis de Requisitos</li>
+                            <li>Diseño del Sistema</li>
+                            <li>Desarrollo</li>
+                            <li>Pruebas</li>
+                            <li>Implementación</li>
+                        </ol></td>
+                    </tr>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="col1">
+                            <h3>Referencias</h3>
+                            
+                        </td>
+                        <td><ul>
                             <li>Creado en VisualStudio Code</li>
                             <li>Beal, V. (n.d.). <i>Internet vs. World Wide Web</i>. Webopedia. Recuperado de <a href="https://www.webopedia.com/insights/internet-vs-world-wide-web/">https://www.webopedia.com/insights/internet-vs-world-wide-web/</a></li>
                             <li>MDN Web Docs. (2023). <i>What is a URL?</i>. Mozilla Developer Network. Recuperado de <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL">https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL</a></li>
@@ -163,64 +163,92 @@
                             <li>W3Schools. (2023). <i>HTML5 vs HTML4</i>. Recuperado de <a href="https://www.w3schools.com/html/html5_intro.asp">https://www.w3schools.com/html/html5_intro.asp</a></li>
                             <li>MDN Web Docs. (2023). <i>HTML Table Basics</i>. Mozilla Developer Network. Recuperado de <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics">https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics</a></li>
                             <li>W3Schools. (2023). <i>HTML5 Form Input Types</i>. Recuperado de <a href="https://www.w3schools.com/html/html5_form_input_types.asp">https://www.w3schools.com/html/html5_form_input_types.asp</a></li>
-                        </ul>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-<!--
-        <section>
-            <h1>Tabla</h1>
-            <table>
-                <style>
-                    th.custom-th { color: orange !important; }
-                    .clase { border-style: dashed; border-width: 2px; }
-                    #etiqueta.custom-td {
-                        font-weight: bold !important;
-                        font-size: 20px !important;
-                        color: blue !important;
-                    }
-                </style>
-                <thead>
-                    <tr>
-                        <th class="custom-th"><span id="funspan">Función</span></th>
-                        <th>Nombre</th>
+                        </ul></td>
                     </tr>
-                </thead>
+                </tfoot>
+            </table>
+    <!--
+            <section>
+                <h1>Tabla</h1>
+                <table>
+                    <style>
+                        th.custom-th { color: orange !important; }
+                        .clase { border-style: dashed; border-width: 2px; }
+                        #etiqueta.custom-td {
+                            font-weight: bold !important;
+                            font-size: 20px !important;
+                            color: blue !important;
+                        }
+                    </style>
+                    <thead>
+                        <tr>
+                            <th class="custom-th"><span id="funspan">Función</span></th>
+                            <th>Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button id="boton" class="button is-info is-link">Button</button></td>
+                            <td id="etiqueta" class="custom-td">Encabezado</td>
+                        </tr>
+                        <tr>
+                            <td class="coson"><span id="funspan">Contenido</span></td>
+                            <td>Contenido</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section> -->
+        </body>
+
+        </section>
+
+        <section id="Lab3_Css" class="hidden">
+            <h1>Cascading Style Sheets (Hojas de Estilo en Cascada)</h1>
+            <TAble>
+                <tr>
+                    <th>Preguntas</th>
+                    <th>Respuestas</th>
+                </tr>
                 <tbody>
                     <tr>
-                        <td><button id="boton" class="button is-info is-link">Button</button></td>
-                        <td id="etiqueta" class="custom-td">Encabezado</td>
+                        <td>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</td>
+                        <td>Limitar su uso al mínimo ya que no es una buena práctica, usarlo cuando trabajas con varias hojas de estilo o frameworks que impiden o dificultan la Implementación
+                            de un CSS. Debe ser utilizado como última opción para dar prioridad a un estilo específico.</td>
                     </tr>
                     <tr>
-                        <td class="coson"><span id="funspan">Contenido</span></td>
-                        <td>Contenido</td>
+                        <td>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</td>
+                        <td>Hay imágenes protegidas que no se pueden usar, igual hay otras muy pesadas que vuelven el código poco eficiente</td>
+                    </tr>
+                    <tr>
+                        <td>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</td>
+                        <td>Para la creación web recomiendo más %, ya que esta unidad de medida es adaptativa ideal para diseños responsivos</td>
+                    </tr>
+                    <tr>
+                        <td>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</td>
+                        <td>Porque reduce la cantidad de caracteres que el sistema debe leer y el espacio, por lo que lee el código más rápido</td>
                     </tr>
                 </tbody>
-            </table>
-        </section> -->
+                
+            </TAble>
+            
+        </section>
+
+        <section id="Lab4_JS" class="hidden">
+            <h2>Cubo desde 1 hasta n</h2>
+            <script src="funciones de java/funciones.js"></script>
+            <script>
+                let n = prompt ("que número")
+                cuadrados(n)
+                suma()
+            </script>
+        </section>
+
+        <section id="Lab5_FW" class="hidden">
+            <h2>Sección 3</h2>
+            <p>Contenido de la sección 3.</p>
+        </section>
+        <script src="funciones de java/cosa.js"></script>
+        <script src="funciones de java/arreglos.js"></script>
+        <script src="funciones de java/navegacion.js"></script>
     </body>
-
-    </section>
-
-    <section id="Lab3_Css" class="hidden">
-        <h2>Sección 2</h2>
-        <p>Contenido de la sección 2.</p>
-    </section>
-
-    <section id="Lab4_JS" class="hidden">
-        <h2>Sección 3</h2>
-        <p>Contenido de la sección 3.</p>
-    </section>
-
-    <section id="Lab5_FW" class="hidden">
-        <h2>Sección 3</h2>
-        <p>Contenido de la sección 3.</p>
-    </section>
-    <script src="scripts.js"></script>
-    
-    <script src="funciones de java/cosa.js"></script>
-    <script src="funciones de java/arreglos.js"></script>
-    <script src="funciones de java/navegacion.js"></script>
-</body>
 </html>

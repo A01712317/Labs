@@ -1,20 +1,29 @@
-/* styles.css */
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+/* Estilos generales */
 body {
+    margin: 0;
     font-family: "Roboto", "Arial", sans-serif;
     line-height: 1.5;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Hace que los hijos ocupen el ancho completo */
+    justify-content: center; /* Centra el contenido verticalmente */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    padding: 4em 1em;
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho/alto */
+    max-width: none; /* Limita el ancho máximo del contenido */
+    width: 100%; /* Asegura que ocupe el ancho completo */
 }
 
-
+/* Estilos para el nav */
 nav {
     background-color: #333;
     overflow: hidden;
     width: 100%; /* Ocupa todo el ancho */
-    display: flex; /* Usa flexbox para alinear los enlaces */
-    justify-content: flex-start; /* Alinea los enlaces a la izquierda */
+    display: flex;
+    justify-content: space-between; /* Distribuye mejor los elementos */
 }
-
 nav a {
     color: white;
     text-align: center;
@@ -32,8 +41,62 @@ nav a:hover {
     display: none; /* Oculta las secciones por defecto */
 }
 
+/* Estilos para las secciones */
 section {
     padding: 4em 1em;
-    max-width: 50em;
-    margin: 0 auto;
+    max-width: 70em;
+    width: 100%;
+    text-align: center;
+    margin: auto; /* Centra horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    box-sizing: border-box;
+}
+
+
+/* Estilos para h1 */
+h1 {
+    font-size: 2.5em !important; /* Tamaño grande */
+    font-weight: 500 !important; /* Grosor de la fuente */
+    color: #d4b9b9 !important; /* Color personalizado */
+    margin-bottom: 0.5em !important; /* Espaciado inferior */
+}
+
+/* Estilos para h2 */
+h2 {
+    font-size: 2em !important; /* Tamaño mediano */
+    font-weight: 500 !important; /* Grosor de la fuente */
+    color: #9c8585 !important; /* Color personalizado */
+    margin-bottom: 0.5em !important; /* Espaciado inferior */
+}
+table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Evita espacios dobles entre bordes */
+    margin: 1em 0; /* Espaciado superior e inferior */
+    background-color: #aa4040; /* Fondo de la tabla */
+    padding: 1em; /* Espaciado interno general */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Bordes sutiles */
+    padding: 16px 20px !important; /* Más espacio interno: 16px arriba/abajo, 20px izq/der */
+    text-align: left !important; /* Alineación del texto */
+}
+
+th {
+    background-color: #333; /* Fondo oscuro en encabezados */
+    color: white; /* Texto en blanco */
+    font-weight: bold;
+}
+
+/* Ajuste de tamaño de columnas */
+th:first-child, td:first-child {
+    width: 30%; /* La primera columna ocupa el 30% */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 70%; /* La segunda columna ocupa el 70% */
 }

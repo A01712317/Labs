@@ -4,7 +4,6 @@ arrgelo.push("que")
 
 arrgelo[10]="Otro"
 
-arrgelo=5
 
 arrgelo["uno"]=2
 
