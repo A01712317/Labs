@@ -1,5 +1,15 @@
 git add -a
 
+//Crear rama
+git checkout -b nombre/rama
+
+
+//Cambiar de rama
+git checkout nombre/rama
+
 git commit -m "Mensaje descriptivo"
 
 git push
+
+//Muestra las ramas existentes y la actual
+git branch
