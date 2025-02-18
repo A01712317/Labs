@@ -50,7 +50,7 @@ function suma() {
 
     // Crear un nuevo párrafo en lugar de un elemento body
     let resultado = document.createElement("p");
-    resultado.textContent = "Resultado: " + suma + ", ";
+    resultado.textContent = "Resultado de la suma de: " +random1+ " y "+random2+" es: " + suma + ", ";
     if (supuesto == suma) {
         resultado.textContent += "estás en lo correcto";
     } else {
