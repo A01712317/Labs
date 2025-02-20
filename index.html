@@ -11,7 +11,7 @@
             <a href="#" data-section="Lab0" id="htmlLink">Html</a>
             <a href="#" data-section="Lab3_Css">Css</a>
             <a href="#" data-section="Lab4_JS">Java Script</a>
-            <button href="#" data-section="Lab5_FW">Frameworks</button>
+            <a href="#" data-section="Lab5_FW">Frameworks</a>
         </nav>
 
 
@@ -252,12 +252,152 @@
             <script>
                 promedios()
             </script>
-            
+            <br>
+            <script>
+                inverso()
+            </script>
+
+            <body>
+                <h1>Gestión de Tareas</h1>
+                <p>En mis laboratorios noto que debo de cubrir barias tareas y a veces olvido todas, por lo que una herramienta que me ayudaría
+                    es una herramienta que me permite organizar mis tareas y tener un seguimiento de mis avances.
+                </p>
+                <br>
+                <input type="text" id="nuevaTarea" placeholder="Nueva tarea">
+                <button onclick="agregarTarea()">Agregar Tarea</button>
+                
+                <h2>Tareas:</h2>
+                <ul id="listaTareas"></ul>
+                
+                <h2>Resumen:</h2>
+                <p id="resumen"></p>
+
+                <script>
+                    // Objeto Tarea
+                    class Tarea {
+                        constructor(descripcion) {
+                            this.descripcion = descripcion;
+                            this.completada = false;
+                        }
+
+                        // Método para marcar una tarea como completada
+                        completar() {
+                            this.completada = true;
+                        }
+
+                        // Método para obtener la descripción de la tarea con su estado
+                        obtenerDescripcion() {
+                            return this.completada ? `[Completada] ${this.descripcion}` : this.descripcion;
+                        }
+                    }
+
+                    // Lista de tareas
+                    const tareas = [];
+
+                    // Función para agregar una tarea
+                    function agregarTarea() {
+                        const descripcion = document.getElementById('nuevaTarea').value;
+                        if (descripcion) {
+                            const tarea = new Tarea(descripcion);
+                            tareas.push(tarea);
+                            actualizarVista();
+                            document.getElementById('nuevaTarea').value = '';
+                        }
+                    }
+
+                    // Función para marcar una tarea como completada
+                    function marcarCompletada(index) {
+                        tareas[index].completar();
+                        actualizarVista();
+                    }
+
+                    // Función para actualizar la vista
+                    function actualizarVista() {
+                        const listaTareas = document.getElementById('listaTareas');
+                        listaTareas.innerHTML = '';
+                        tareas.forEach((tarea, index) => {
+                            const li = document.createElement('li');
+                            li.textContent = tarea.obtenerDescripcion();
+                            if (tarea.completada) {
+                                li.classList.add('completed');
+                            } else {
+                                const botonCompletar = document.createElement('button');
+                                botonCompletar.textContent = 'Completar';
+                                botonCompletar.onclick = () => marcarCompletada(index);
+                                li.appendChild(botonCompletar);
+                            }
+                            listaTareas.appendChild(li);
+                        });
+
+                        const resumen = document.getElementById('resumen');
+                        const tareasCompletadas = tareas.filter(tarea => tarea.completada).length;
+                        const tareasPendientes = tareas.length - tareasCompletadas;
+                        resumen.textContent = `Tareas completadas: ${tareasCompletadas}, Tareas pendientes: ${tareasPendientes}`;
+                    }
+                </script>
+            </body>
+            <table>
+                <tr>
+                    <th><h2>Preguntas</h2></th>
+                    <th><h2>Respuestas</h2></th>
+                </tr>
+                <tr>
+                    <td>Diferencias y semejanzas hay entre Java y JavaScript</td>
+                    <td><p>Java Script es un lenguaje que no está echo para soportar garnades cargas de trabajo, principalmente debido a que está
+                        más orientado al paradigma orientado a eventos y no al de objetos, es decir más sencillos como las interacciones que 
+                        un usuario pueda tener en una página
+                    </p></td>
+                </tr>
+                <tr>
+                    <td>Métodos del objeto date</td>
+                    <td>Date es un método que puede contener una fecha en distintos formatos, este tambien tiene métodos como
+                        <ul>
+                            <li><code>.getdate</code></li>
+                            <li><code>.getMonth</code></li>
+                            <li><code>.getFullYear</code></li>
+                            <li><code>.getHours</code></li>
+                        </ul>
+                        Que básicamente sirven para obtener o establecer partes de la fecha o hora en en distintos formatos
+                    </td>
+                </tr>
+                <tr>
+                    <td>Métodos de arreglos</td>
+                    <td>
+                        Los arreglos son objetos que contienen varios valores almacenados en un solo lugar, cada uno identificado por un índice. Los métodos más comunes de los arreglos son:
+                        <ul>
+                            <li><code>.push</code> agrega un elemento al final</li>
+                            <li><code>.pop</code>elimina el último elemento</li>
+                            <li><code>.shift</code>extrae el primer valor</li>
+                            <li><code>.unshift</code>elimina el primer elemento</li>
+                            <li><code>.splice</code>elimina, reemplaza o añade elementos a partir de un punto especificado</li>
+                            <li><code>.slice</code>copia una parte de un arreglo</li>
+                            <li><code>.forEach</code>aplica una función a cada elemento en el arreglo</li>
+                        </ul>
+                        Estos sólo son unos de los métodos que permiten manipular los elementos del arreglo
+                    </td>
+                </tr>
+                <tr>
+                    <td>¿Cómo declaro una variable con alcance local dentro de una función?</td>
+                    <td><ol>
+                        <li><code>var</code>Son accesibles dentro de toda una funcion</li>
+                        <li><code>let</code> son accesibles dentro de un bloque de código (una función, un ciclo o una expresión), pero no en el bloque padre</li>
+                        <li><code>const</code> son accesibles dentro de un bloque de código (una función, un ciclo o una expresión), pero no en el bloque padre, y su valor no puede ser cambiado</li>
+                    </ol></td>
+                </tr>
+                <tr>
+                    <td>¿Qué implica usar variables globales dentro de funciones?</td>
+                    <td>Éstas pueden ser útiles en situaciones únicas, pero es poco recomendable ya que 
+                        las variables globales son accesibles desde cualquier parte del código, puede causar confusiones y problemas de rendimiento cuando se trabaja con muchos archivos y  participantes.
+                    </td>
+                </tr>
+            </table>
         </section>
 
         <section id="Lab5_FW" class="hidden">
-            <h2>Sección 3</h2>
-            <p>Contenido de la sección 3.</p>
+            <h2>Material design</h2>
+            <p>Es una página que contiene variedad de colores y al escoger 2 da una paleta de colores
+                estas paletas incluyen su número de color en hexadecimal por lo que pueden incluirse en el diseño web facilmente
+                y es útil para encontrar colores que me agraden y se vean bien en mi página.</p>
         </section>
         <script src="funciones de java/cosa.js"></script>
         <script src="funciones de java/arreglos.js"></script>
