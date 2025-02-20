@@ -1,10 +1,7 @@
-
-
 function cuadrados(n) {
     let tabla = document.createElement("table");
     tabla.style.width = "100%";
     tabla.style.borderCollapse = "collapse";
-    
     let thead = document.createElement("thead");
     let headerRow = document.createElement("tr");
     let th1 = document.createElement("th");
@@ -93,13 +90,11 @@ function arreglo() {
     document.getElementById("Lab4_JS").appendChild(resultado); // Insertar el mensaje en la sección
 }
 
-
 function promedios() {
     let tabla = document.createElement("table");
     tabla.style.width = "100%";
     tabla.style.borderCollapse = "collapse";
     tabla.style.border = "1px solid black";
-
     let min = 2;
     let max = 15;
     const columnas = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -133,10 +128,7 @@ function promedios() {
         for (let j = 0; j < columnas; j++) {
             let td = document.createElement("td");
             td.textContent = matriz[i][j];
-
             td.style.cssText = `width: ${100 / columnas}% !important;`;
-
-
             row.appendChild(td);
         }
         tbody.appendChild(row);
@@ -167,4 +159,33 @@ function promedios() {
 
     tablaPromedios.appendChild(tbodyPromedios);
     document.getElementById("Lab4_JS").appendChild(tablaPromedios);
+}
+
+function inverso() {
+
+    let min = 1000;
+    let max = 10000000;
+    const num = Math.floor(Math.random() * (max - min + 1)) + min;
+    // Crear un nuevo párrafo en lugar de un elemento body
+    
+    // Convertir el número a una cadena
+    let strNum = num.toString();
+    
+    // Dividir la cadena en un arreglo de caracteres
+    let arrNum = strNum.split('');
+    
+    // Invertir el arreglo de caracteres
+    let arrNumReversed = arrNum.reverse();
+    
+    // Unir el arreglo de caracteres invertido en una nueva cadena
+    let strNumReversed = arrNumReversed.join('');
+    
+    // Convertir la cadena invertida de nuevo a un número
+    let numReversed = parseInt(strNumReversed);
+    
+    // Regresar el número invertido
+    let resultado = document.createElement("h2");
+    resultado.textContent = "El inverso de " +num+ " es: "+numReversed;
+    document.getElementById("Lab4_JS").appendChild(resultado); // Insertar el mensaje en la sección
+
 }
