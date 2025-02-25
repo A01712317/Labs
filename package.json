@@ -4,6 +4,7 @@
   "description": "Laboratorios y pruebas",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/A01712317/Labs/issues"
   },
-  "homepage": "https://github.com/A01712317/Labs#readme"
+  "homepage": "https://github.com/A01712317/Labs#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
