@@ -189,3 +189,65 @@ function inverso() {
     document.getElementById("Lab4_JS").appendChild(resultado); // Insertar el mensaje en la sección
 
 }
+
+// Objeto Tarea
+class Tarea {
+    constructor(descripcion) {
+        this.descripcion = descripcion;
+        this.completada = false;
+    }
+
+    // Método para marcar una tarea como completada
+    completar() {
+        this.completada = true;
+    }
+
+    // Método para obtener la descripción de la tarea con su estado
+    obtenerDescripcion() {
+        return this.completada ? `[Completada] ${this.descripcion}` : this.descripcion;
+    }
+}
+
+// Lista de tareas
+const tareas = [];
+
+// Función para agregar una tarea
+function agregarTarea() {
+    const descripcion = document.getElementById('nuevaTarea').value;
+    if (descripcion) {
+        const tarea = new Tarea(descripcion);
+        tareas.push(tarea);
+        actualizarVista();
+        document.getElementById('nuevaTarea').value = '';
+    }
+}
+
+// Función para marcar una tarea como completada
+function marcarCompletada(index) {
+    tareas[index].completar();
+    actualizarVista();
+}
+
+// Función para actualizar la vista
+function actualizarVista() {
+    const listaTareas = document.getElementById('listaTareas');
+    listaTareas.innerHTML = '';
+    tareas.forEach((tarea, index) => {
+        const li = document.createElement('li');
+        li.textContent = tarea.obtenerDescripcion();
+        if (tarea.completada) {
+            li.classList.add('completed');
+        } else {
+            const botonCompletar = document.createElement('button');
+            botonCompletar.textContent = 'Completar';
+            botonCompletar.onclick = () => marcarCompletada(index);
+            li.appendChild(botonCompletar);
+        }
+        listaTareas.appendChild(li);
+    });
+
+    const resumen = document.getElementById('resumen');
+    const tareasCompletadas = tareas.filter(tarea => tarea.completada).length;
+    const tareasPendientes = tareas.length - tareasCompletadas;
+    resumen.textContent = `Tareas completadas: ${tareasCompletadas}, Tareas pendientes: ${tareasPendientes}`;
+}

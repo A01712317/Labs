@@ -5,6 +5,9 @@
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <style>
+            @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+        </style>
     </head>
     <body>
         <nav>
@@ -12,6 +15,7 @@
             <a href="#" data-section="Lab3_Css">Css</a>
             <a href="#" data-section="Lab4_JS">Java Script</a>
             <a href="#" data-section="Lab5_FW">Frameworks</a>
+            <a href="#" data-section="Lab_node">Node</a>
         </nav>
 
 
@@ -235,7 +239,6 @@
 
         <section id="Lab4_JS" class="hidden">
             <h2>Cubo desde 1 hasta n</h2>
-            <script src="funciones de java/funciones.js"></script>
             <script>
                 let n = prompt ("que número")
                 cuadrados(n)
@@ -271,70 +274,6 @@
                 
                 <h2>Resumen:</h2>
                 <p id="resumen"></p>
-
-                <script>
-                    // Objeto Tarea
-                    class Tarea {
-                        constructor(descripcion) {
-                            this.descripcion = descripcion;
-                            this.completada = false;
-                        }
-
-                        // Método para marcar una tarea como completada
-                        completar() {
-                            this.completada = true;
-                        }
-
-                        // Método para obtener la descripción de la tarea con su estado
-                        obtenerDescripcion() {
-                            return this.completada ? `[Completada] ${this.descripcion}` : this.descripcion;
-                        }
-                    }
-
-                    // Lista de tareas
-                    const tareas = [];
-
-                    // Función para agregar una tarea
-                    function agregarTarea() {
-                        const descripcion = document.getElementById('nuevaTarea').value;
-                        if (descripcion) {
-                            const tarea = new Tarea(descripcion);
-                            tareas.push(tarea);
-                            actualizarVista();
-                            document.getElementById('nuevaTarea').value = '';
-                        }
-                    }
-
-                    // Función para marcar una tarea como completada
-                    function marcarCompletada(index) {
-                        tareas[index].completar();
-                        actualizarVista();
-                    }
-
-                    // Función para actualizar la vista
-                    function actualizarVista() {
-                        const listaTareas = document.getElementById('listaTareas');
-                        listaTareas.innerHTML = '';
-                        tareas.forEach((tarea, index) => {
-                            const li = document.createElement('li');
-                            li.textContent = tarea.obtenerDescripcion();
-                            if (tarea.completada) {
-                                li.classList.add('completed');
-                            } else {
-                                const botonCompletar = document.createElement('button');
-                                botonCompletar.textContent = 'Completar';
-                                botonCompletar.onclick = () => marcarCompletada(index);
-                                li.appendChild(botonCompletar);
-                            }
-                            listaTareas.appendChild(li);
-                        });
-
-                        const resumen = document.getElementById('resumen');
-                        const tareasCompletadas = tareas.filter(tarea => tarea.completada).length;
-                        const tareasPendientes = tareas.length - tareasCompletadas;
-                        resumen.textContent = `Tareas completadas: ${tareasCompletadas}, Tareas pendientes: ${tareasPendientes}`;
-                    }
-                </script>
             </body>
             <table>
                 <tr>
@@ -399,8 +338,10 @@
                 estas paletas incluyen su número de color en hexadecimal por lo que pueden incluirse en el diseño web facilmente
                 y es útil para encontrar colores que me agraden y se vean bien en mi página.</p>
         </section>
-        <script src="funciones de java/cosa.js"></script>
-        <script src="funciones de java/arreglos.js"></script>
+        <section id="Lab_node" class= "hidden">
+
+        </section>
         <script src="funciones de java/navegacion.js"></script>
+        <script src="funciones de java/funciones.js"></script>
     </body>
 </html>

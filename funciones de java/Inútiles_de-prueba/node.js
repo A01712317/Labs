@@ -1,56 +1,31 @@
-console.log("Esto se ve solo en la consola")
-console.info("Esto tambien")
-
-console.warn("WARNING Esto igual pero en amarillo")
-
-console.error("ERROR Esto es un error")
-
-console.log("Este es un ejemplo de template string", 10, "un numero")
-console.assert(1==1);
-console.assert(1===1);
-console.assert(1=="1");
-console.assert(1==="1");
-console.assert(1== true);
-console.assert(1=== true);
-
-//Formas de definir variables
-var cosa="Variable antigua"; //no es segura, se puede modificar desde el navegador
-let cosa1="Variable actual"; //No es modificable 
-alert ("ALERTA ALERTA")
-
-
-
-// script.js
-
-
-//funcion moderna o anónima
-
-const rarisimo = () => {
-    console.log("Esto es una coa rarísima")
-}
-
-
-const boton = document.getElementById("boton") 
-console.log(boton)
-boton.onclick = () =>{
-    console.log("Hiciste click")
-}
-
-const accion = () =>{
-    const imagen = document.getElementById("funspan")
-    imagen.innerHTML='<img alt="Foto de nua planta de menta"  src="https://www.genome.gov/sites/default/files/media/images/tg_es/Gen_es_0.jpg" width="300px" height="200px" >'
-    boton.onclick = otraccion
-
-}
-const otraccion = () =>{
-    const imagen = document.getElementById("funspan")
-    imagen.innerHTML='<img alt="Foto de algo"  src="https://1.bp.blogspot.com/-Yc214sRBGpQ/YHPe_lmXfOI/AAAAAAAAA3c/WGv7jXfKBDMkVV2l0pD4mS0_967EMA5KgCLcBGAsYHQ/s685/Gen.png" width="300px" height="200px" >'
-}
-boton.onclick = accion
-
 //Node
 //Usando node podemos manipular archivos, esto no se puede desde el entorno de un navegador ya que estos protegen los equipos 
 //
+
+
+const html = `
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    </head>
+    <body>
+        <form action="/agregar" method="post">
+            <label for="nombre" class="label">Nombre del coso</label>
+            <input
+                id="nombre"
+                class="input is-link"
+                type="text"
+                placeholder="Link input"
+                name="nombre"
+            />
+            <input class="button is-info" type="submit" value="enviar">
+        </form>
+    </body>
+</html>
+`;
+
 
 
 const fileSystem=require('fs'); //define una variable
@@ -86,13 +61,21 @@ for (let item of arreglo){
 console.log("primero?");
 
 
-const http = require('http');
+const plantas = [];
 
-const server = http.createServer( (request, response) => {    
-    console.log(request.url);
-    response.setHeader('Content-Type', 'text/html');
-    response.write("");
-    response.end();
+const http = require('http');
+const fs = require('fs');
+
+
+const server = http.createServer( (request, response) => {  
+
+    if(request.method == "GET" && (request.url == "/agregar" || request.url == "/")) {
+        const htmlContent = fs.readFileSync('index.html', 'utf-8');
+        console.log(request.url);
+        response.setHeader('Content-Type', 'text/html');
+        response.write(htmlContent);
+        response.end();
+    }
 });
 
 server.listen(3000);
