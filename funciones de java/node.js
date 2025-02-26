@@ -66,7 +66,7 @@ const plantas = [];
 const http = require('http');
 const fs = require('fs');
 
-
+const yanosirve=`
 const server = http.createServer( (request, response) => {  
 
     if(request.method == "GET" && (request.url == "/agregar" || request.url == "/")) {
@@ -78,4 +78,4 @@ const server = http.createServer( (request, response) => {
     }
 });
 
-server.listen(3000);
+server.listen(3000);`
