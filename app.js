@@ -1,4 +1,5 @@
 const personajes = [];
+const plantas = [];
 
 const html_header = `
 <!DOCTYPE html>
@@ -6,7 +7,7 @@ const html_header = `
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cheewbaca!</title>
+    <title>Plantas!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
   </head>
   <body>
@@ -75,46 +76,42 @@ const html_header = `
           </div>
         </div>
       </nav>
-
     <section class="section">
         <div class="container">
-        <h1 class="title">
-            Hello there
-        </h1>`;
-
-const html_content_form = `<div class="columns">
-            <div class="column">
-              <form action="/" method="POST">
-                <label for="nombre" class="label">Nombre del personaje</label>
-                <input
-                  class="input is-primary"
-                  type="text"
-                  placeholder="Cheewbaca"
-                  id="nombre"
-                  name="nombre"
-                />
-                <br><br>
-                <input type="submit" id="boton_personaje" class="button is-primary" value="Guardar personaje">
-              </form>
-            </div>
-        </div>
-        `;
+            <h1 class="title">
+                Invernadero
+            </h1>
+            `;
+            
+const html_content_form = `<form action="/plantas/agregar" method="POST">
+              <label for="nombre" class="label">Nombre de la planta</label>
+              <input
+                class="input is-info"
+                type="text"
+                placeholder="Orquídea"
+                id="nombre"
+                name="nombre"
+              />
+              <br><br>
+              <input class="button is-info" type="submit" value="Enviar">
+            </form>`;
 
 const html_footer = `</div>
     </section>
     <footer class="footer">
         <div class="content has-text-centered">
-        <p>
+          <p>
             <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
             The source code is licensed
             <a href="https://opensource.org/license/mit">MIT</a>. The
             website content is licensed
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0//"
-            >CC BY NC SA 4.0</a
+              >CC BY NC SA 4.0</a
             >.
-        </p>
+          </p>
         </div>
-    </footer>
+      </footer>
+      <script src="js/introjs.js"></script>
   </body>
 </html>
 `;
@@ -122,6 +119,8 @@ const html_footer = `</div>
 
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
 
 //Middleware
 app.use((request, response, next) => {
@@ -129,7 +128,15 @@ app.use((request, response, next) => {
     next(); //Le permite a la petición avanzar hacia el siguiente middleware
 });
 
-app.use('/plantas/agregar',(request, response, next) => {
+
+// Registra peticiones tipo get
+app.get('/plantas/agregar',(request, response, next) => {
+    response.send(html_header + html_content_form + html_footer);
+});
+
+// Registra peticiones  http tipo post
+app.post('/plantas/agregar',(request, response, next) => {
+    console.log(request,body)
     response.send(html_header + html_content_form + html_footer);
 });
 

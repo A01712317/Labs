@@ -1,27 +1,3 @@
-const html = `
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    </head>
-    <body>
-        <form action="/agregar" method="post">
-            <label for="nombre" class="label">Nombre del coso</label>
-            <input
-                id="nombre"
-                class="input is-link"
-                type="text"
-                placeholder="Link input"
-                name="nombre"
-            />
-            <input class="button is-info" type="submit" value="enviar">
-        </form>
-    </body>
-</html>
-`;
-
-
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
