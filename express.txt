@@ -1,0 +1,13 @@
+Verificar que express esté instalado 
+    npm -V
+
+automáticamente reinicia tu servidor cuando detecta 
+cambios en los archivos de tu proyecto. Esto te permite
+ ver los cambios en tiempo real sin tener que reiniciar 
+ manualmente el servidor cada vez que hagas una modificación.
+    npm install --save-dev nodemon
+Para instalar paquetes que solo usaré en el desarrollo
+    --save-dev 
+Modificar  package.json en la sección scripts para incluir   "start": "nodemon app.js".
+    npm install --save express
+     npm install --save body-parser
