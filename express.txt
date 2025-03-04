@@ -1,6 +1,8 @@
 Verificar que express esté instalado 
     npm -V
 
+
+
 automáticamente reinicia tu servidor cuando detecta 
 cambios en los archivos de tu proyecto. Esto te permite
  ver los cambios en tiempo real sin tener que reiniciar 

@@ -17,11 +17,5 @@ const personajesRoutes = require('./routs/personajes.routs');
 
 app.use('/personajes', personajesRoutes);
 
-app.use((request, response, next) => {
-    console.log('Otro middleware!');
-    
-    //Manda la respuesta
-    response.send('¡Hola mundo!'); 
-});
 
 app.listen(3000);

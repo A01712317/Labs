@@ -6,8 +6,7 @@ const personajes= [];
 
 const para_post = `
 <section id="Lab_node" class= "hidden">
-
-    <form action="/agregar" method="POST">
+    <form action="/personajes/agregar" method="POST">
         <label for="nombre" class="label">Ingresa tu main de rivals</label>
         <input
         class="input is-info"
@@ -390,7 +389,7 @@ router.post('/agregar', (request, response, next) => {
     html += `</div>`;
     html += para_post;
     response.send(html);
-    });
+});
 router.get('/styles.css',(request, response, next) => {
     response.sendFile(path.join(__dirname,'styles.css'));
 });
