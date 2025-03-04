@@ -13,3 +13,5 @@ Para instalar paquetes que solo usaré en el desarrollo
 Modificar  package.json en la sección scripts para incluir   "start": "nodemon app.js".
     npm install --save express
      npm install --save body-parser
+     npm install express-session
+     npm install cookie-parser
