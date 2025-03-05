@@ -12,23 +12,25 @@
     <body>
         <nav>
             <!-- Contenido de la primera navbar -->
-            <div class="nonav">Sesión: </div>
+            <div class="nonav">
+                Sesión: 
                 <div class="navbar-end" >
                     <div class="navbar-item">
                         <div class="buttons">
                             <% if (isLoggedIn) { %>
                                 <%= username %> | 
-                                <a href="/usuarios/logout" class="button is-danger">
+                                <a href="/usuarios/logout" type="submit" value="Enviar" class="button is-danger">
                                     Logout
                                 </a>
                             <% } else { %>
                                 <a class="button is-primary">
                                     <strong>Sign up</strong>
                                 </a>
-                                <a href="/usuarios/login" class="button is-light">
+                                <a href="/usuarios/login" type="submit" value="Enviar" class="button is-light">
                                     Log in
-                            </a>
-                        <% } %>
+                                </a>
+                            <% } %>
+                        </div>
                     </div>
                 </div>
             </div>
