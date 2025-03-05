@@ -12,4 +12,4 @@ router.get('/funciones.js', controller._get_funciones);
 
 router.get('/navegacion.js', controller._get_navecacion);
 
-module.exports = router; 
+module.exports = router;

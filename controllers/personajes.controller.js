@@ -7,16 +7,18 @@ controller.use(express.static(path.join(__dirname,'../public')));
 const Personaje = require('../models/personaje.model');
 
 controller._get_contenido=(request, response, next) => {
-    response.render('agregar_personaje')
-}
+    console.log(request.session.username);
+    response.render('agregar_personaje', {
+        isLoggedIn: request.session.isLoggedIn || false,
+        username: request.session.username || '',
+    });
+};
 controller._post_peronajes=(request, response, next) => {
     console.log(request.body);
     const mi_personaje= new Personaje(request.body.nombre);
     mi_personaje.save();
-    response.redirect('/personajes/');
-
-
-
+    response.setHeader('Set-Cookie', `ultima_planta=${mi_personaje.nombre}`);
+    response.redirect('/personajes/agregar');
 }
 
 controller._get_styles=(request, response, next) => {
