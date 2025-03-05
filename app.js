@@ -26,11 +26,14 @@ app.use((request, response, next) => {
     //Le permite a la petición avanzar hacia el siguiente middleware
     next(); 
 });
-const usuariosRouts = require('./routs/usuarios.routs');
-app.use('/usuarios', usuariosRouts);
+
 
 const personajesRouts = require('./routs/personajes.routs');
+
 app.use('/personajes', personajesRouts);
+
+const usuariosRouts = require('./routs/usuarios.routs');
+app.use('/usuarios', usuariosRouts);
 
 app.use((request, response, next) => {
     console.log('Otro middleware!');
@@ -39,4 +42,4 @@ app.use((request, response, next) => {
     response.send('No se encuentra el recurso que estás buscando'); 
 });
 
-app.listen(3000);
+app.listen(4000);

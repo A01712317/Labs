@@ -13,7 +13,7 @@ controller.get_login=(request, response, next) => {
 controller.post_login=(request, response, next) => {
     request.session.isLoggedIn =true;
     request.session.username = request.body.username;
-    response.redirect('/peronaje/agregar');
+    response.redirect('/personajes/agregar');
 };
 
 controller.get_logout = (request, response, next) => {
@@ -22,4 +22,15 @@ controller.get_logout = (request, response, next) => {
         response.redirect('/usuarios/login'); 
     });
 };
+controller._get_styles=(request, response, next) => {
+    response.sendFile(path.join(__dirname,'../public/css/styles.css'));
+}
+
+controller._get_funciones=(request,response,next) => {
+    response.sendFile(path.join(__dirname, '../public/funciones.js'));
+}
+
+controller._get_navecacion=(request,response,next) => {
+    response.sendFile(path.join(__dirname, '../public/navegacion.js'));
+}
 module.exports = controller

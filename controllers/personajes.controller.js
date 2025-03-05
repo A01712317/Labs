@@ -21,6 +21,15 @@ controller._post_peronajes=(request, response, next) => {
     response.redirect('/personajes/agregar');
 }
 
+controller.get_root = (request, response, next) => {
+    console.log(request.get('Cookie'));
+    response.render('lista_personajes', {
+        isLoggedIn: request.session.isLoggedIn || false,
+        username: request.session.username || '',
+        personajes: Personaje.fetchAll(),
+    });
+};
+
 controller._get_styles=(request, response, next) => {
     response.sendFile(path.join(__dirname,'../public/css/styles.css'));
 }
@@ -32,5 +41,7 @@ controller._get_funciones=(request,response,next) => {
 controller._get_navecacion=(request,response,next) => {
     response.sendFile(path.join(__dirname, '../public/navegacion.js'));
 }
+
+
 
 module.exports = controller
