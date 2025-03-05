@@ -1,0 +1,14 @@
+<%- include ('includes/head') %> 
+<div class="columns">
+<% for(let personaje of personajes) { %>
+    <div class="column">
+        <div class="card">
+            <div class="card-content">
+                <div class="content">`;
+                    <%= personaje.nombre %>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+</div>

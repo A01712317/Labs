@@ -3,33 +3,20 @@ const path = require('path');
 const fs = require('fs');
 const controller =express.Router();
 controller.use(express.static(path.join(__dirname,'../public')));
-const personajes= [];
+
+const Personaje = require('../models/personaje.model');
 
 controller._get_contenido=(request, response, next) => {
-    let html= '';
-    html += fs.readFileSync(path.join(__dirname,'../public/head.html')).toString();
-    html += fs.readFileSync(path.join(__dirname,'../public/form.html')).toString();
-    response.send(html);
+    response.render('agregar_personaje')
 }
 controller._post_peronajes=(request, response, next) => {
     console.log(request.body);
-    personajes.push(request.body.nombre);
-    let html= '';
-    html += fs.readFileSync(path.join(__dirname,'../public/head.html')).toString();
-    html += `<div class="columns">`;
-    for(let personaje of personajes) {
-    html += `<div class="column">`;
-    html += `<div class="card">
-    <div class="card-content">
-        <div class="content">`;
-    html += personaje;
-    html += `</div>
-            </div>
-            </div>
-        </div>`;}
-    html += `</div>`;
-    html += fs.readFileSync(path.join(__dirname,'../public/form.html')).toString();
-    response.send(html);
+    const mi_personaje= new Personaje(request.body.nombre);
+    mi_personaje.save();
+    response.redirect('/personajes/');
+
+
+
 }
 
 controller._get_styles=(request, response, next) => {
