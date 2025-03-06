@@ -6,7 +6,7 @@ router.get('/agregar', controller._get_contenido);
 
 router.post('/agregar', controller._post_peronajes );
 
-router.get('/', controller.get_root);
+router.get('/agregar', controller.get_root);
 
 router.get('/styles.css',  controller._get_styles);
 

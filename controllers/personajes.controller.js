@@ -13,6 +13,7 @@ controller._get_contenido=(request, response, next) => {
         username: request.session.username || '',
     });
 };
+
 controller._post_peronajes=(request, response, next) => {
     console.log(request.body);
     const mi_personaje= new Personaje(request.body.nombre);
@@ -23,7 +24,7 @@ controller._post_peronajes=(request, response, next) => {
 
 controller.get_root = (request, response, next) => {
     console.log(request.get('Cookie'));
-    response.render('lista_personajes', {
+    response.render('_lista_personajes', {
         isLoggedIn: request.session.isLoggedIn || false,
         username: request.session.username || '',
         personajes: Personaje.fetchAll(),

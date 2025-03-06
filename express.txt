@@ -15,3 +15,5 @@ Modificar  package.json en la sección scripts para incluir   "start": "nodemon 
      npm install --save body-parser
      npm install express-session
      npm install cookie-parser
+Trabajar con bases de datos
+     npm install mysql2
