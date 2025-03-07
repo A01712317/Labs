@@ -1,14 +1,23 @@
 <%- include ('includes/head') %> 
+<% if (mensaje != '') { %>
+    <div class="notification is-info">
+        <%= info %>
+    </div>
+<% } %>
+
 <div class="columns">
-<% for(let personaje of personajes) { %>
-    <div class="column">
-        <div class="card">
-            <div class="card-content">
-                <div class="content">`;
-                    <%= personaje.nombre %>
+    <% for(let personaje of personajes) { %>
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+                        <a href="/personajes/agregar/<%= personaje.id %>"><%= personaje.nombre %></a>
+                        <p><%= personaje.created_at %></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-<% } %>
+    <% } %>
 </div>
+
+<%- include ('includes/footer') %> 
