@@ -47,8 +47,8 @@ exports.get_root = (request, response, next) => {
             response.render('_lista_personajes', {
                 isLoggedIn: request.session.isLoggedIn || false,
                 username: request.session.username || '',
-                personaje: rows,
-                info: mensaje,
+                personajes: rows,
+                mensaje: mensaje,
             });
         }).catch(()=>{
             console.log('error jaja');
