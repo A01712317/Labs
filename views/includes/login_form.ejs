@@ -1,6 +1,12 @@
 <section id="loggin">
+    <% if (warning != '') { %>
+        <div class="notification is-warning">
+            <%= warning %>
+        </div>
+    <% } %>
     <form  action= "/usuarios/<% if (isNew) { %>signup<% } else { %>login<% } %>" 
         method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <label for="username" class="label">Usuario</label>
         <input
             class="input is-info"

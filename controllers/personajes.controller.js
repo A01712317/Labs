@@ -9,17 +9,13 @@ exports._get_contenido=(request, response, next) => {
     response.render('agregar_personaje', {
         isLoggedIn: request.session.isLoggedIn || false,
         username: request.session.username || '',
+        csrfToken: request.csrfToken(),
     });
 };
 
 exports._post_peronajes = (request, response, next) => {
+    console.log(request.body);
     const nombre = request.body.nombre;
-
-    // Validar que el nombre no esté vacío
-    if (!nombre || nombre.trim() === '') {
-        request.session.info = 'El nombre del personaje no puede estar vacío';
-        return response.redirect('/personajes/agregar');
-    }
 
     const mi_personaje = new Personaje(nombre);
     mi_personaje.save()

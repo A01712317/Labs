@@ -25,7 +25,7 @@ module.exports = class Usuario {
         return db.execute('SELECT * FROM usuarios');
     }
 
-    static fetchOne(id) {
+    static fetchOne(username) {
         return db.execute('SELECT * FROM usuarios WHERE username = ?', [username]);
     }
 

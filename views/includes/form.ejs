@@ -1,6 +1,7 @@
 <section id="Lab_node" class="hidden">
         <form action="/personajes/agregar" method="POST">
             <div class="field">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
                 <label for="nombre" class="label">Ingresa tu main de rivals</label>
                 <div class="control">
                     <input
