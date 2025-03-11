@@ -19,3 +19,7 @@ Trabajar con bases de datos
      npm install mysql2
 
     npm install cookie-parser
+
+    npm install bcryptjs
+
+    npm install csurf  

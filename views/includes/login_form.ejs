@@ -1,5 +1,6 @@
 <section id="loggin">
-    <form  action="/usuarios/login" method="POST">
+    <form  action= "/usuarios/<% if (isNew) { %>signup<% } else { %>login<% } %>" 
+        method="POST">
         <label for="username" class="label">Usuario</label>
         <input
             class="input is-info"

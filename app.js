@@ -18,7 +18,11 @@ app.use(session({
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
-
+/*
+const csrf = require('csurf');
+const csrfProtection = csrf(); 
+app.use(csrfProtection); 
+*/
 //Middleware
 app.use((request, response, next) => {
     console.log('Middleware!');

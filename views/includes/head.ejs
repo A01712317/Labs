@@ -8,6 +8,7 @@
         <style>
             @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
         </style>
+        
     </head>
     <body>
         <nav>
@@ -19,9 +20,9 @@
                         <div class="buttons">
                             <% if (isLoggedIn) { %>
                                 <%= username %> | 
-                                <a href="/usuarios/logout" type="submit" value="Enviar" class="button is-danger">
+                                <button onclick="window.location. href='/usuarios/logout'" type="submit" value="Enviar" class="button is-danger">
                                     Logout
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>  
@@ -30,9 +31,9 @@
         <nav>
             <a href="#" data-section="Lab0" id="htmlLink">Html</a>
             <a href="#" data-section="Lab3_Css">Css</a>
-            <a href="#" data-section="Lab4_JS">Java Script</a>
-            <a href="#" data-section="Lab5_FW">Frameworks</a>
-            <a href="#" data-section="Lab_node">Node</a>
+            <a href="#" data-section="Lab4_JS" onclick="ejecutar()">Java Script</a>
+            <a href="#" data-section="Lab5_FW" >Frameworks</a>
+            <a href="#" data-section="Lab_node" >Node</a>
         </nav>
         <section id="Lab0" class="hidden">
             
@@ -253,27 +254,40 @@
         </section>
 
         <section id="Lab4_JS" class="hidden">
-            <h2>Cubo desde 1 hasta n</h2>
+            
             <script src="funciones.js"></script>
             <script>
-                let n = prompt ("que número")
-                cuadrados(n)
-            </script>
-            <br>
-            <script>
-                suma()
-            </script>
-            <br>
-            <script>
-                arreglo()
-            </script>
-            <br>
-            <script>
-                promedios()
-            </script>
-            <br>
-            <script>
-                inverso()
+                function ejecutar() {
+                    
+                    let n = prompt("¿Qué número?");
+                    cuadrados(n);
+        
+                    // Salto de línea
+                    let br1 = document.createElement("br");
+                    document.body.appendChild(br1);
+
+                    suma();
+                    
+                    // Salto de línea
+                    let br2 = document.createElement("br");
+                    document.body.appendChild(br2);
+
+                    arreglo();
+                    
+                    // Salto de línea
+                    let br3 = document.createElement("br");
+                    document.body.appendChild(br3);
+
+                    promedios();
+                    
+                    // Salto de línea
+                    let br4 = document.createElement("br");
+                    document.body.appendChild(br4);
+
+                    inverso();
+                }
+
+                
             </script>
 
             <body>
@@ -346,6 +360,8 @@
                     </td>
                 </tr>
             </table>
+            <br><br>
+            <h2>Cubo desde 1 hasta n</h2>
         </section>
 
         <section id="Lab5_FW" class="hidden">
@@ -356,19 +372,15 @@
         </section>
                         
                             <% } else { %>
-                                <a class="button is-primary">
+                                <button onclick="window.location.href='/usuarios/signup'" class="button is-primary">
                                     <strong>Sign up</strong>
-                                </a>
-                                <a href="/usuarios/login" type="submit" value="Enviar" class="button is-light">
+                                </button>
+                                <button onclick="window.location.href='/usuarios/login'" type="submit" value="Enviar" class="button is-light">
                                     Log in
-                                </a>
+                                </button>
                             <% } %>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        
-
-
-        
