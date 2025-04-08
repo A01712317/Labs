@@ -3,3 +3,6 @@ https://github.com/CuDavidSchz/monarch_systems/commit/62af0ba8f7cd5e327402260689
 
 Labo Orientado a eventos
 https://github.com/CuDavidSchz/monarch_systems/commit/601ae3431cfb73bf61ac7e1fec0b45c98c21db43
+
+Labo Ajax
+https://github.com/CuDavidSchz/monarch_systems/commit/79626bcbed1315460fc5f4ef3af314c812cc3f9b
