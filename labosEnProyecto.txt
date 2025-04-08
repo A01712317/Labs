@@ -1,2 +1,5 @@
 Labo RBAC
 https://github.com/CuDavidSchz/monarch_systems/commit/62af0ba8f7cd5e32740226068963069df7790ab4
+
+Labo Orientado a eventos
+https://github.com/CuDavidSchz/monarch_systems/commit/601ae3431cfb73bf61ac7e1fec0b45c98c21db43
