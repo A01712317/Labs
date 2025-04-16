@@ -1,8 +1,5 @@
 Verificar que express esté instalado 
     npm -V
-
-
-
 automáticamente reinicia tu servidor cuando detecta 
 cambios en los archivos de tu proyecto. Esto te permite
  ver los cambios en tiempo real sin tener que reiniciar 
@@ -23,3 +20,11 @@ Trabajar con bases de datos
     npm install bcryptjs
 
     npm install csurf  
+
+Graficas
+    install node d3
+
+servidor    
+    npm install dotenv
+Correos
+    npm install nodemailer

@@ -6,3 +6,6 @@ https://github.com/CuDavidSchz/monarch_systems/commit/601ae3431cfb73bf61ac7e1fec
 
 Labo Ajax
 https://github.com/CuDavidSchz/monarch_systems/commit/79626bcbed1315460fc5f4ef3af314c812cc3f9b
+
+Labo servicios web
+https://github.com/CuDavidSchz/monarch_systems/commit/c95e472121aeca516a341341c0b762d547494d40
